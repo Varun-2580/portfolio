@@ -1,0 +1,11 @@
+{
+  "name": "mern-robotics-portfolio-workspace",
+  "version": "1.0.0",
+  "description": "Full-stack MERN Application for Pyla Amruth Varun - Mechanical & Robotics Engineer",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build"
+  }
+}

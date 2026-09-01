@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-obsidian: #07090E;
+  --surface-slate: #0E131F;
+  --surface-card: #121826;
+  --orange-accent: #FF5722;
+  --orange-glow: #FF7043;
+  --cyan-accent: #00F2FE;
+  --indigo-accent: #6366F1;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Folioblox Background Grid & Glows */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.ambient-glow-orange {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(255, 87, 34, 0.18) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.ambient-glow-cyan {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+/* Glassmorphic Folioblox Cards */
+.folio-card {
+  background: rgba(14, 19, 31, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.folio-card:hover {
+  background: rgba(18, 24, 38, 0.9);
+  border-color: rgba(255, 87, 34, 0.4);
+  box-shadow: 0 0 30px rgba(255, 87, 34, 0.18), 0 20px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-4px);
+}
+
+/* Folioblox Pill Button */
+.btn-folio {
+  background: linear-gradient(135deg, #FF5722 0%, #FF7043 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 0 20px rgba(255, 87, 34, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-folio:hover {
+  background: linear-gradient(135deg, #ff7043 0%, #ff8a65 100%);
+  box-shadow: 0 0 30px rgba(255, 87, 34, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-folio-cyan {
+  background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+  color: #040914;
+  font-weight: 700;
+  border-radius: 9999px;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-folio-cyan:hover {
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Gradient Typography */
+.gradient-text-orange {
+  background: linear-gradient(135deg, #FFFFFF 30%, #FF7043 70%, #FF5722 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #FFFFFF 30%, #38BDF8 70%, #00F2FE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-obsidian);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-accent);
+}

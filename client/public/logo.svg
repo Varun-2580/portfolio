@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="rustAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5722" />
+      <stop offset="100%" stop-color="#892816" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Base -->
+  <rect width="100" height="100" rx="22" fill="#07090E" />
+
+  <!-- Hexagon Outer Boundary -->
+  <polygon points="50,14 82,32 82,68 50,86 18,68 18,32" stroke="url(#rustAccent)" stroke-width="3" fill="#121826" />
+
+  <!-- Inverted 'V' Mechanism with Center Joint -->
+  <path d="M 32 36 L 50 72 L 68 36" stroke="#F3EFEA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Axis Center Point -->
+  <circle cx="50" cy="72" r="3.5" fill="#00F2FE" />
+</svg>
